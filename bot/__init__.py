@@ -133,23 +133,14 @@ cached_dict = {}
 JAVA = ("uJjxvDIuQLVbyMZ61fyl7")
 
 
-BOT_TOKEN = environ.get(
-    "BOT_TOKEN",
-    ""
-)
+BOT_TOKEN = environ.get("BOT_TOKEN", "")
 if len(BOT_TOKEN) == 0:
-    log_error("BOT_TOKEN variable is missing! Exiting now")
+    log_error("BOT_TOKEN variable is how missing! Exiting now")
     exit(1)
 
-BOT_ID = BOT_TOKEN.split(
-    ":",
-    1
-)[0]
+BOT_ID = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get(
-    "DATABASE_URL",
-    ""
-)
+DATABASE_URL = environ.get("DATABASE_URL", "")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ""
 
