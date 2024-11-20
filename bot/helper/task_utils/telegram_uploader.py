@@ -128,7 +128,12 @@ class TelegramUploader:
         )
         if not await aiopath.exists(self._thumb): # type: ignore
             self._thumb = None
-
+            
+   # async def __buttons(self, up_path, is_video=False):
+       # buttons = ButtonMaker()
+        #buttons.add_mediainfo_button(up_path, self.__mediainfo)
+        #return buttons.build_menu(1) if self.__has_buttons else None
+    
     async def __buttons(self, up_path, is_video=False):
         buttons = ButtonMaker()
         #try:
